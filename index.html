@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Assignment</title>
+</head>
+
+<body>
+    <div id="ToggleImages">
+        <h1 style="display: flex; justify-content: center; padding: 5px;">Toggling</h1>
+        <img id="Images" src="https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cmFuZG9tfGVufDB8fDB8fHww" alt="Image" width=1520px height=500px>
+        <script src="script.js"></script>
+    </div>
+
+    <div id="calculatorContainer">
+        <br>
+        <h1 style="display: flex; justify-content: center; padding: 5px;">Calculations</h1>        
+        <input type="text" id="num1" placeholder="Enter first number">
+        <br><br>
+        <input type="text" id="num2" placeholder="Enter second number">
+        <br><br>
+        <button onclick="add()" style="padding: 5px; color: white; background-color: black;">Addition</button>
+        <button onclick="subtract()" style="padding: 5px; color: white; background-color: black;">Subtraction</button>
+        <button onclick="multiply()" style="padding: 5px; color: white; background-color: black;">Multiplication</button>
+        <button onclick="divide()" style="padding: 5px; color: white; background-color: black;">Division</button>
+        <br><br>
+        <input type="text" id="result" placeholder="Result" readonly style="padding: 10px;">
+    </div>
+
+    <div>
+        <h1 style="display: flex; justify-content: center; padding: 5px;">Copying to Clipboard</h1>
+        <div id="inputContainer">
+            <label for="stringToCopy">Enter a string to copy:</label>
+            <input type="text" id="stringToCopy" value="" placeholder="Enter">
+            <br><br>
+            <button onclick="copyToClipboard()" style="padding: 5px; color: white; background-color: black;">Copy to Clipboard</button>
+        </div>
+        <br>
+        <div id="outputContainer"></div>
+    </div>
+
+    <h1 style="display: flex; justify-content: center; padding: 5px;">Progress Bar</h1>
+    <div id="progressBar" style=" width: 0%; height: 20px; background-color: lightgreen; text-align: center; line-height: 20px; color:red;">0%</div>
+    <br>
+    <button onclick="updateProgress()" style="padding: 5px; color: white; background-color: black;">Click to Update Progress</button>
+</body>
+</html>
